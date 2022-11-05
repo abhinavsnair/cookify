@@ -40,7 +40,10 @@ class WelcomeScreen extends StatelessWidget {
                 children: [
                   TextButton(
                     onPressed: () {
-                      Get.to(SigninScreen());
+                      Get.to(
+                        SigninScreen(),
+                        transition: Transition.fadeIn,
+                      );
                     },
                     child: Text(
                       'SIGN UP',
@@ -54,8 +57,11 @@ class WelcomeScreen extends StatelessWidget {
                     width: 45,
                   ),
                   GestureDetector(
-                    onTap: (){
-                      Get.to(const LoginScreen());
+                    onTap: () {
+                      Get.to(
+                        const LoginScreen(),
+                        transition: Transition.fade,
+                      );
                     },
                     child: Container(
                       height: 40,

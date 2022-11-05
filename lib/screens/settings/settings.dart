@@ -211,7 +211,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     Center(
                       child: GestureDetector(
                         onTap: () {
-                          Get.to(const WelcomeScreen());
+                          Get.to(
+                            const WelcomeScreen(),
+                            transition: Transition.fadeIn,
+                          );
                         },
                         child: Container(
                           decoration: BoxDecoration(

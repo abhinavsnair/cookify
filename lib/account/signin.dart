@@ -83,7 +83,7 @@ class SigninScreen extends StatelessWidget {
               padding: const EdgeInsets.only(left: 250),
               child: TextButton(
                 onPressed: () {
-                  Get.to(const FpScreen());
+                  Get.to(const FpScreen(),transition: Transition.fadeIn);
                 },
                 child: Text(
                   'Forgot Password?',
@@ -97,7 +97,7 @@ class SigninScreen extends StatelessWidget {
             ),
             GestureDetector(
               onTap: (() {
-                Get.to(const NavScreen());
+                Get.to(const NavScreen(),transition: Transition.fadeIn);
               }),
               child: Container(
                 height: 45,
@@ -123,7 +123,7 @@ class SigninScreen extends StatelessWidget {
             ),
             GestureDetector(
               onTap: (() {
-                Get.to(const LoginScreen());
+                Get.to(const LoginScreen(),transition: Transition.fadeIn);
               }),
               child: SizedBox(
                 height: 30,
