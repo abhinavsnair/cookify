@@ -13,7 +13,12 @@ class NavScreen extends StatefulWidget {
   State<NavScreen> createState() => _NavScreenState();
 }
 
-List screens = [HomeScreen(), ShowcaseScreen(), const MealScreen(), SettingsScreen()];
+List screens = [
+  HomeScreen(),
+  ShowcaseScreen(),
+  const MealScreen(),
+  SettingsScreen()
+];
 
 class _NavScreenState extends State<NavScreen> {
   int currentindex = 0;
