@@ -48,6 +48,7 @@ class _MealScreenState extends State<MealScreen> {
 
   @override
   Widget build(BuildContext context) {
+    
     return Scaffold(
       backgroundColor: bcolor,
       body: SafeArea(

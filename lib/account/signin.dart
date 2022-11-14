@@ -29,10 +29,13 @@ class SigninScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+    
     return Scaffold(
       backgroundColor: bcolor,
       body: SafeArea(
-        child: Column(
+        child: ListView(
           children: [
             const Center(
               child: Icon(
@@ -44,12 +47,14 @@ class SigninScreen extends StatelessWidget {
             const SizedBox(
               height: 20,
             ),
-            Text(
-              'Create an Account',
-              style: GoogleFonts.rokkitt(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-                color: orange,
+            Center(
+              child: Text(
+                'Create an Account',
+                style: GoogleFonts.rokkitt(
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                  color: orange,
+                ),
               ),
             ),
             const SizedBox(
@@ -63,7 +68,8 @@ class SigninScreen extends StatelessWidget {
                   child: Container(
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(10),
-                      color: const Color.fromARGB(255, 255, 102, 0).withOpacity(0.18),
+                      color: const Color.fromARGB(255, 255, 102, 0)
+                          .withOpacity(0.18),
                     ),
                     child: TextField(
                       decoration: InputDecoration(
@@ -83,7 +89,7 @@ class SigninScreen extends StatelessWidget {
               padding: const EdgeInsets.only(left: 250),
               child: TextButton(
                 onPressed: () {
-                  Get.to(const FpScreen(),transition: Transition.fadeIn);
+                  Get.to(const FpScreen(), transition: Transition.fadeIn);
                 },
                 child: Text(
                   'Forgot Password?',
@@ -97,7 +103,7 @@ class SigninScreen extends StatelessWidget {
             ),
             GestureDetector(
               onTap: (() {
-                Get.to(const NavScreen(),transition: Transition.fadeIn);
+                Get.to(const NavScreen(), transition: Transition.fadeIn);
               }),
               child: Container(
                 height: 45,
@@ -123,7 +129,10 @@ class SigninScreen extends StatelessWidget {
             ),
             GestureDetector(
               onTap: (() {
-                Get.to(const LoginScreen(),transition: Transition.fadeIn);
+                Get.to(
+                  const LoginScreen(),
+                  transition: Transition.fadeIn,
+                );
               }),
               child: SizedBox(
                 height: 30,
