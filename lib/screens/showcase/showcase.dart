@@ -3,12 +3,13 @@
 import 'package:cookify/utilities/card.dart';
 import 'package:cookify/utilities/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
+
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
-import 'package:get/utils.dart';
+
 import 'package:google_fonts/google_fonts.dart';
+
+import 'utils/search_bar.dart';
 
 class ShowcaseScreen extends StatelessWidget {
   ShowcaseScreen({super.key});
@@ -67,44 +68,7 @@ class ShowcaseScreen extends StatelessWidget {
             padding: const EdgeInsets.all(8.0),
             child: ListView(
               children: [
-                Row(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Container(
-                        height: 50,
-                        width: 300,
-                        decoration: BoxDecoration(
-                            color: Color.fromARGB(255, 58, 58, 58),
-                            borderRadius: BorderRadius.circular(10)),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              prefixIcon: Icon(
-                                Icons.search,
-                                color: grey,
-                              ),
-                              hintText: 'search',
-                              hintStyle: TextStyle(color: grey),
-                              border: InputBorder.none),
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          color: boxOrange.withOpacity(0.4),
-                          borderRadius: BorderRadius.circular(10)),
-                      child: Icon(
-                        Icons.restaurant_menu,
-                        color: orange,
-                      ),
-                    )
-                  ],
-                ),
+                SearchBar(),
                 SizedBox(
                   height: 100,
                   width: MediaQuery.of(context).size.width,
@@ -158,12 +122,13 @@ class ShowcaseScreen extends StatelessWidget {
                                 decoration: BoxDecoration(
                                     borderRadius: BorderRadius.circular(10),
                                     image: DecorationImage(
-                                      image: NetworkImage(
-                                          image[index]),
+                                      image: NetworkImage(image[index]),
                                       fit: BoxFit.cover,
                                     )),
                               ),
-                              SizedBox(height: 5,),
+                              SizedBox(
+                                height: 5,
+                              ),
                               Text(
                                 item[index],
                                 style: GoogleFonts.rokkitt(
@@ -239,7 +204,9 @@ class ShowcaseScreen extends StatelessWidget {
                     );
                   }),
                 ),
-                SizedBox(height: 10,),
+                SizedBox(
+                  height: 10,
+                ),
                 SpinKitRing(
                   color: orange,
                   lineWidth: 3,
