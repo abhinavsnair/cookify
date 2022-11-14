@@ -18,32 +18,29 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-   Future<bool> showExitPopup() async {
-
-      return await showDialog( //show confirm dialogue
-        //the return value will be from "Yes" or "No" options
-        context: context,
-        builder: (context) => AlertDialog(
-          title: const Text('Exit App'),
-          content: const Text('Do you want to exit an App?'),
-          actions:[
-            ElevatedButton(
-              onPressed: () => Navigator.of(context).pop(false),
-              //return false when click on "NO"
-              child:const Text('No'),
+    Future<bool> showExitPopup() async {
+      return await showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: const Text('Exit App'),
+              content: const Text('Do you want to exit an App?'),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(false),
+                  child: const Text('No'),
+                ),
+                ElevatedButton(
+                  onPressed: () => SystemNavigator.pop(),
+                  child: const Text('Yes'),
+                ),
+              ],
             ),
-
-            ElevatedButton(
-              onPressed: () => SystemNavigator.pop(),
-              //return true when click on "Yes"
-              child:const Text('Yes'),
-            ),
-          ],
-        ),
-      )  ?? false; //if showDialouge had returned null, then return false
+          ) ??
+          false;
     }
+
     return WillPopScope(
-      onWillPop:showExitPopup ,
+      onWillPop: showExitPopup,
       child: Scaffold(
         backgroundColor: bcolor,
         body: Padding(
@@ -189,7 +186,10 @@ class HomeScreen extends StatelessWidget {
                           gradient: LinearGradient(
                             begin: Alignment.topCenter,
                             end: Alignment.bottomCenter,
-                            colors: [Colors.orange.withOpacity(0.15), Colors.red],
+                            colors: [
+                              Colors.orange.withOpacity(0.15),
+                              Colors.red
+                            ],
                           ),
                         ),
                         child: Column(
@@ -284,8 +284,8 @@ class HomeScreen extends StatelessWidget {
                                   ),
                                 ),
                                 Padding(
-                                  padding:
-                                      const EdgeInsets.only(bottom: 15, left: 28),
+                                  padding: const EdgeInsets.only(
+                                      bottom: 15, left: 28),
                                   child: Container(
                                     padding: const EdgeInsets.only(
                                       left: 5,
@@ -294,8 +294,9 @@ class HomeScreen extends StatelessWidget {
                                     height: 80,
                                     width: 180,
                                     decoration: BoxDecoration(
-                                      color: const Color.fromARGB(255, 41, 27, 22)
-                                          .withOpacity(0.6),
+                                      color:
+                                          const Color.fromARGB(255, 41, 27, 22)
+                                              .withOpacity(0.6),
                                       borderRadius: BorderRadius.circular(10),
                                     ),
                                     child: Column(
