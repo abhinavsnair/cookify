@@ -97,11 +97,7 @@ class LoginScreen extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Container(
-                        height: size.height * 0.001,
-                        width: size.width * 0.3,
-                        color: orange,
-                      )
+                     
                     ],
                   ),
                 ),

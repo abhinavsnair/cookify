@@ -68,11 +68,6 @@ class FpScreen extends StatelessWidget {
                           fontWeight: FontWeight.w500,
                         ),
                       ),
-                      Container(
-                        height: 0.5,
-                        width: 112,
-                        color: orange,
-                      )
                     ],
                   ),
                 ),
