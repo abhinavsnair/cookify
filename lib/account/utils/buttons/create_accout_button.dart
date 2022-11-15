@@ -13,24 +13,28 @@ class CreateAccountButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return GestureDetector(
       onTap: (() {
         Get.to(const NavScreen(), transition: Transition.fadeIn);
       }),
-      child: Container(
-        height: 45,
-        width: 300,
-        decoration: BoxDecoration(
-          color: orange,
-          borderRadius: BorderRadius.circular(10),
-        ),
-        child: Center(
-          child: Text(
-            'Create an Account',
-            style: GoogleFonts.rokkitt(
-              color: Colors.white,
-              fontWeight: FontWeight.w500,
-              fontSize: 16,
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Container(
+          height: size.height*0.062,
+          width: 300,
+          decoration: BoxDecoration(
+            color: orange,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Center(
+            child: Text(
+              'Create an Account',
+              style: GoogleFonts.rokkitt(
+                color: Colors.white,
+                fontWeight: FontWeight.w500,
+                fontSize: 16,
+              ),
             ),
           ),
         ),

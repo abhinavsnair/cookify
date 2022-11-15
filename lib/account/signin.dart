@@ -31,6 +31,7 @@ class SigninScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: bcolor,
       body: SafeArea(
@@ -90,8 +91,8 @@ class SigninScreen extends StatelessWidget {
                       ),
                     ),
                     Container(
-                      height: 0.5,
-                      width: 148,
+                      height:size.height*0.001,
+                      width: size.width*0.38,
                       color: orange,
                     )
                   ],

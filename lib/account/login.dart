@@ -12,15 +12,19 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: bcolor,
       body: SafeArea(
         child: Padding(
-          padding: const EdgeInsets.only(top: 100),
+          padding: const EdgeInsets.only(top: 80),
           child: Column(
             children: [
               const TitleWidget(
                 title: 'Log In',
+              ),
+              const SizedBox(
+                height: 40,
               ),
               Padding(
                 padding:
@@ -94,8 +98,8 @@ class LoginScreen extends StatelessWidget {
                         ),
                       ),
                       Container(
-                        height: 0.5,
-                        width: 123,
+                        height: size.height * 0.001,
+                        width: size.width * 0.3,
                         color: orange,
                       )
                     ],
@@ -109,4 +113,3 @@ class LoginScreen extends StatelessWidget {
     );
   }
 }
-
