@@ -25,15 +25,25 @@ class HomeScreen extends StatelessWidget {
             context: context,
             builder: (context) => AlertDialog(
               title: const Text('Exit App'),
-              content: const Text('Do you want to exit an App?'),
+              content: const Text('Do you want to exit the App?'),
               actions: [
                 ElevatedButton(
                   onPressed: () => Navigator.of(context).pop(false),
-                  child: const Text('No'),
+                  child: const Text(
+                    'No',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
                 ElevatedButton(
                   onPressed: () => SystemNavigator.pop(),
-                  child: const Text('Yes'),
+                  child: const Text(
+                    'Yes',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
               ],
             ),

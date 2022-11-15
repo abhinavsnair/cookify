@@ -1,5 +1,6 @@
 import 'package:cookify/utilities/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'utils/category_list.dart';
@@ -51,67 +52,101 @@ class _MealScreenState extends State<MealScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: bcolor,
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                'Today\'s Plan',
-                style: GoogleFonts.rokkitt(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30,
-                  color: Colors.white,
+    Future<bool> showExitPopup() async {
+      return await showDialog(
+            context: context,
+            builder: (context) => AlertDialog(
+              title: const Text('Exit App'),
+              content: const Text('Do you want to exit the App?'),
+              actions: [
+                ElevatedButton(
+                  onPressed: () => Navigator.of(context).pop(false),
+                  child: const Text(
+                    'No',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
                 ),
-              ),
-              SizedBox(
-                height: 50,
-                width: double.infinity,
-                child: ListView.builder(
-                    scrollDirection: Axis.horizontal,
-                    itemCount: _datalist.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Padding(
-                        padding: const EdgeInsets.all(5.0),
-                        child: ChoiceChip(
-                          selectedColor: orange,
-                          backgroundColor: Colors.grey[800],
-                          label: SizedBox(
-                            height: 20,
-                            width: 50,
-                            child: Center(
-                              child: Text(
-                                _datalist[index],
+                ElevatedButton(
+                  onPressed: () => SystemNavigator.pop(),
+                  child: const Text(
+                    'Yes',
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ) ??
+          false;
+    }
+
+    return WillPopScope(
+      onWillPop: showExitPopup,
+      child: Scaffold(
+        backgroundColor: bcolor,
+        body: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Today\'s Plan',
+                  style: GoogleFonts.rokkitt(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30,
+                    color: Colors.white,
+                  ),
+                ),
+                SizedBox(
+                  height: 50,
+                  width: double.infinity,
+                  child: ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: _datalist.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Padding(
+                          padding: const EdgeInsets.all(5.0),
+                          child: ChoiceChip(
+                            selectedColor: orange,
+                            backgroundColor: Colors.grey[800],
+                            label: SizedBox(
+                              height: 20,
+                              width: 50,
+                              child: Center(
+                                child: Text(
+                                  _datalist[index],
+                                ),
                               ),
                             ),
+                            selected: _value == index,
+                            onSelected: (bool value) {
+                              setState(() {
+                                _value = value ? index : null;
+                              });
+                            },
+                            labelStyle: GoogleFonts.rokkitt(
+                              color: Colors.white,
+                            ),
                           ),
-                          selected: _value == index,
-                          onSelected: (bool value) {
-                            setState(() {
-                              _value = value ? index : null;
-                            });
-                          },
-                          labelStyle: GoogleFonts.rokkitt(
-                            color: Colors.white,
-                          ),
-                        ),
-                      );
-                    }),
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              const VitaminsandMinaralsWidget(),
-              CategoryList(
-                foodtime: foodtime,
-                image: image,
-                item: item,
-                time: time,
-              )
-            ],
+                        );
+                      }),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                const VitaminsandMinaralsWidget(),
+                CategoryList(
+                  foodtime: foodtime,
+                  image: image,
+                  item: item,
+                  time: time,
+                )
+              ],
+            ),
           ),
         ),
       ),
