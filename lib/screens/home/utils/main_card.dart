@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import '../../../utilities/card.dart';
-import '../../../utilities/utils.dart';
+import '../../../utilities/constants.dart';
 
 class MainCard extends StatelessWidget {
   const MainCard({
@@ -16,11 +17,11 @@ class MainCard extends StatelessWidget {
         Get.to(const CardView());
       }),
       child: Container(
-        padding: const EdgeInsets.only(top: 5),
-        height: 400,
+        padding:  EdgeInsets.only(top: 5.w),
+        height: 400.h,
         width: double.infinity,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10.r),
           image: const DecorationImage(
             image: NetworkImage(
                 'https://i.pinimg.com/564x/07/43/10/0743105a1caa0e9ac691f4eb50830730.jpg'),
@@ -34,13 +35,13 @@ class MainCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 5),
+                  padding:  EdgeInsets.only(left: 5.w),
                   child: Container(
-                    height: 35,
-                    width: 60,
+                    height: 35.h,
+                    width: 60.w,
                     decoration: BoxDecoration(
-                      color: orange,
-                      borderRadius: BorderRadius.circular(10),
+                      color: orange.withOpacity(0.6),
+                      borderRadius: BorderRadius.circular(10.r),
                     ),
                     child: const Center(
                         child: Text(
@@ -49,24 +50,24 @@ class MainCard extends StatelessWidget {
                     )),
                   ),
                 ),
-                const Padding(
-                  padding: EdgeInsets.only(right: 5),
+                 Padding(
+                  padding: EdgeInsets.only(right: 5.w),
                   child: Icon(
                     Icons.bookmark_border_outlined,
-                    color: orange,
-                    size: 30,
+                    color: orange.withOpacity(0.8),
+                    size: 30.h,
                   ),
                 )
               ],
             ),
             Container(
-              padding: const EdgeInsets.only(left: 5, right: 5, top: 10),
-              height: 150,
+              padding:  EdgeInsets.only(left: 5.w, right: 5.w, top: 10.h),
+              height: 150.h,
               width: double.infinity,
               decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
-                    bottomLeft: Radius.circular(10),
-                    bottomRight: Radius.circular(10)),
+                borderRadius:  BorderRadius.only(
+                    bottomLeft: Radius.circular(10.r),
+                    bottomRight: Radius.circular(10.r)),
                 gradient: LinearGradient(
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
@@ -80,22 +81,22 @@ class MainCard extends StatelessWidget {
                     'Chicken Makhani\nSouth Special',
                     style: GoogleFonts.rokkitt(
                         color: Colors.white,
-                        fontSize: 28,
+                        fontSize: 28.sp,
                         fontWeight: FontWeight.bold),
                   ),
                   Row(
-                    children: const [
+                    children:  [
                       Text(
                         '30 recipes',
-                        style: TextStyle(color: Colors.white, fontSize: 13),
+                        style: TextStyle(color: Colors.white, fontSize: 13.sp),
                       ),
-                      Text(
+                      const Text(
                         '|',
                         style: TextStyle(color: Colors.white),
                       ),
                       Text(
                         '1 serving',
-                        style: TextStyle(color: Colors.white, fontSize: 13),
+                        style: TextStyle(color: Colors.white, fontSize: 13.sp),
                       )
                     ],
                   )

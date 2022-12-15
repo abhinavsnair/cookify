@@ -1,7 +1,8 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
-import 'package:cookify/utilities/utils.dart';
+import 'package:cookify/utilities/constants.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/route_manager.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +14,7 @@ class CardView extends StatelessWidget {
     return Scaffold(
       backgroundColor: bcolor,
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding:  EdgeInsets.all(8.0.w),
         child: ListView(children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,50 +41,50 @@ class CardView extends StatelessWidget {
             style: GoogleFonts.rokkitt(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 30,
+              fontSize: 30.sp,
             ),
           ),
           Text(
             'White onion, Fennel and watercress salad',
-            style: GoogleFonts.rokkitt(color: grey, fontSize: 16),
+            style: GoogleFonts.rokkitt(color: grey, fontSize: 16.sp),
           ),
           SizedBox(
-            height: 20,
+            height: 20.h,
           ),
           Text(
             'Nutritions',
             style: GoogleFonts.rokkitt(
-                fontWeight: FontWeight.bold, fontSize: 26, color: Colors.white),
+                fontWeight: FontWeight.bold, fontSize: 26.sp, color: Colors.white,),
           ),
           Stack(
             children: [
               SizedBox(
-                height: 230,
+                height: 230.h,
                 width: double.infinity,
                 child: Row(
                   children: [
                     Column(
                       children: [
                         SizedBox(
-                          height: 20,
+                          height: 20.h,
                         ),
                         Container(
-                          padding: EdgeInsets.all(4),
-                          height: 40,
-                          width: 130,
+                          padding: EdgeInsets.all(4.w),
+                          height: 40.h,
+                          width: 130.w,
                           decoration: BoxDecoration(
                               color: Color.fromARGB(255, 212, 108, 48)
                                   .withOpacity(0.6),
-                              borderRadius: BorderRadius.circular(20)),
+                              borderRadius: BorderRadius.circular(20.r)),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Container(
-                                height: 30,
-                                width: 30,
+                                height: 30.h,
+                                width: 30.w,
                                 decoration: BoxDecoration(
                                     color: orange,
-                                    borderRadius: BorderRadius.circular(20)),
+                                    borderRadius: BorderRadius.circular(20).r),
                                 child: Center(
                                     child: Text(
                                   '250',
@@ -107,27 +108,27 @@ class CardView extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 10.h,
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding:  EdgeInsets.all(8.0.w),
                           child: Container(
-                            padding: EdgeInsets.all(4),
-                            height: 40,
-                            width: 130,
+                            padding: EdgeInsets.all(4.w),
+                            height: 40.h,
+                            width: 130.w,
                             decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 212, 108, 48)
                                     .withOpacity(0.6),
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20.r)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Container(
-                                  height: 30,
-                                  width: 30,
+                                  height: 30.h,
+                                  width: 30.w,
                                   decoration: BoxDecoration(
                                       color: orange,
-                                      borderRadius: BorderRadius.circular(20)),
+                                      borderRadius: BorderRadius.circular(20.r)),
                                   child: Center(
                                       child: Text(
                                     '6.7',
@@ -152,27 +153,27 @@ class CardView extends StatelessWidget {
                           ),
                         ),
                         SizedBox(
-                          height: 10,
+                          height: 10.h,
                         ),
                         Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding:  EdgeInsets.all(8.0.w),
                           child: Container(
-                            padding: EdgeInsets.all(4),
-                            height: 40,
-                            width: 130,
+                            padding: EdgeInsets.all(4.w),
+                            height: 40.h,
+                            width: 130.w,
                             decoration: BoxDecoration(
                                 color: Color.fromARGB(255, 212, 108, 48)
                                     .withOpacity(0.6),
-                                borderRadius: BorderRadius.circular(20)),
+                                borderRadius: BorderRadius.circular(20.r)),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 Container(
-                                  height: 30,
-                                  width: 30,
+                                  height: 30.h,
+                                  width: 30.w,
                                   decoration: BoxDecoration(
                                       color: orange,
-                                      borderRadius: BorderRadius.circular(20)),
+                                      borderRadius: BorderRadius.circular(20.r)),
                                   child: Center(
                                       child: Text(
                                     '35',
@@ -202,12 +203,12 @@ class CardView extends StatelessWidget {
                 ),
               ),
               Positioned(
-                left: 170,
-                top: 10,
-                bottom: 45,
+                left: 170.w,
+                top: 10.h,
+                bottom: 45.h,
                 child: Container(
-                  height: 200,
-                  width: 200,
+                  height: 200.h,
+                  width: 200.w,
                   decoration: BoxDecoration(
                     image: DecorationImage(
                       image: NetworkImage(

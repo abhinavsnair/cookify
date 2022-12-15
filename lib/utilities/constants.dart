@@ -1,7 +1,5 @@
-
-
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 const bcolor = Color.fromARGB(255, 32, 32, 32);
 const orange = Color.fromARGB(255, 250, 133, 66);

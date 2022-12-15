@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-import '../../../utilities/utils.dart';
+import '../../../utilities/constants.dart';
 
 class FeelFreeBox extends StatelessWidget {
   const FeelFreeBox({
@@ -12,10 +13,10 @@ class FeelFreeBox extends StatelessWidget {
     return Container(
       decoration: BoxDecoration(
         color: boxOrange.withOpacity(0.3),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
       ),
-      height: 50,
-      width: 300,
+      height: 50.h,
+      width: 300.w,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -23,14 +24,15 @@ class FeelFreeBox extends StatelessWidget {
             Icons.headphones,
             color: orange,
           ),
-          const SizedBox(
-            width: 5,
+           SizedBox(
+            width: 5.w,
           ),
           Text(
             'Feel free to ask, We ready to help',
             style: GoogleFonts.rokkitt(
               color: orange,
               fontWeight: FontWeight.bold,
+              fontSize: 13.sp
             ),
           )
         ],

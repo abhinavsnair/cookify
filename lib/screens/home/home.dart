@@ -1,7 +1,8 @@
 import 'package:cookify/screens/home/utils/top_title.dart';
-import 'package:cookify/utilities/utils.dart';
+import 'package:cookify/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'utils/container_list.dart';
 import 'utils/main_card.dart';
@@ -56,26 +57,27 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: bcolor,
         body: Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding:  EdgeInsets.all(8.0.w),
           child: ListView(
+            
             children: [
               const TopTitle(),
-              const SizedBox(
-                height: 20,
+               SizedBox(
+                height: 20.h,
               ),
               const SeeRecipeContainer(),
-              const SizedBox(
-                height: 20,
+               SizedBox(
+                height: 20.h,
               ),
               const MainCard(),
-              const SizedBox(
-                height: 20,
+               SizedBox(
+                height: 20.h,
               ),
               Text(
                 'Trending Recipie',
                 style: GoogleFonts.rokkitt(
                   color: Colors.white,
-                  fontSize: 20,
+                  fontSize: 20.sp,
                 ),
               ),
               ContainerList(

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../utilities/utils.dart';
+import '../../../utilities/constants.dart';
 
 class ProfileBox extends StatelessWidget {
   const ProfileBox({
@@ -11,25 +12,25 @@ class ProfileBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 120,
+      height: 120.h,
       width: double.infinity,
       decoration: BoxDecoration(
         color: const Color.fromARGB(255, 128, 127, 127).withOpacity(0.1),
-        borderRadius: BorderRadius.circular(10),
+        borderRadius: BorderRadius.circular(10.r),
       ),
       child: Row(
         children: [
-          const CircleAvatar(
-            radius: 40,
-            backgroundImage: NetworkImage(
+           CircleAvatar(
+            radius: 40.r,
+            backgroundImage: const NetworkImage(
               'https://i.pinimg.com/236x/fe/73/a6/fe73a68c83bb9c803b46ff50e228507d.jpg',
             ),
           ),
-          const SizedBox(
-            width: 10,
+           SizedBox(
+            width: 10.w,
           ),
           Padding(
-            padding: const EdgeInsets.only(top: 18),
+            padding:  EdgeInsets.only(top: 18.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -38,23 +39,24 @@ class ProfileBox extends StatelessWidget {
                   style: GoogleFonts.rokkitt(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
-                    fontSize: 20,
+                    fontSize: 20.sp,
                   ),
                 ),
                 Text(
                   'abhinavsnair28@gmail.com',
                   style: GoogleFonts.rokkitt(
                     color: grey,
+                    fontSize: 11.sp,
                   ),
                 ),
-                const SizedBox(
-                  height: 10,
+                 SizedBox(
+                  height: 10.h,
                 ),
                 Container(
-                  height: 30,
-                  width: 100,
+                  height: 30.h,
+                  width: 100.w,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
+                      borderRadius: BorderRadius.circular(20.r),
                       border: const Border(
                         bottom: BorderSide(color: orange),
                         top: BorderSide(color: orange),
@@ -66,6 +68,7 @@ class ProfileBox extends StatelessWidget {
                       'Edit Profile',
                       style: GoogleFonts.rokkitt(
                         color: orange,
+                        fontSize: 13.sp,
                       ),
                     ),
                   ),

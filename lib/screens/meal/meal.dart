@@ -1,8 +1,8 @@
-import 'package:cookify/utilities/utils.dart';
+import 'package:cookify/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import 'utils/category_list.dart';
 import 'utils/vit_min_widget.dart';
 
@@ -89,7 +89,7 @@ class _MealScreenState extends State<MealScreen> {
         backgroundColor: bcolor,
         body: SafeArea(
           child: Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding:  EdgeInsets.all(8.0.w),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -97,25 +97,25 @@ class _MealScreenState extends State<MealScreen> {
                   'Today\'s Plan',
                   style: GoogleFonts.rokkitt(
                     fontWeight: FontWeight.bold,
-                    fontSize: 30,
+                    fontSize: 30.sp,
                     color: Colors.white,
                   ),
                 ),
                 SizedBox(
-                  height: 50,
+                  height: 50.h,
                   width: double.infinity,
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
                       itemCount: _datalist.length,
                       itemBuilder: (BuildContext context, int index) {
                         return Padding(
-                          padding: const EdgeInsets.all(5.0),
+                          padding:  EdgeInsets.all(5.0.w),
                           child: ChoiceChip(
                             selectedColor: orange,
                             backgroundColor: Colors.grey[800],
                             label: SizedBox(
-                              height: 20,
-                              width: 50,
+                              height: 20.h,
+                              width: 50.w,
                               child: Center(
                                 child: Text(
                                   _datalist[index],
@@ -135,8 +135,8 @@ class _MealScreenState extends State<MealScreen> {
                         );
                       }),
                 ),
-                const SizedBox(
-                  height: 20,
+                 SizedBox(
+                  height: 20.h,
                 ),
                 const VitaminsandMinaralsWidget(),
                 CategoryList(

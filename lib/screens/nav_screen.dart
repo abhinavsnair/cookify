@@ -3,7 +3,7 @@ import 'package:cookify/screens/home/home.dart';
 import 'package:cookify/screens/meal/meal.dart';
 import 'package:cookify/screens/settings/settings.dart';
 import 'package:cookify/screens/showcase/showcase.dart';
-import 'package:cookify/utilities/utils.dart';
+import 'package:cookify/utilities/constants.dart';
 import 'package:flutter/material.dart';
 
 class NavScreen extends StatefulWidget {
@@ -17,7 +17,7 @@ List screens = [
   HomeScreen(),
   ShowcaseScreen(),
   const MealScreen(),
-  SettingsScreen()
+  const SettingsScreen()
 ];
 
 class _NavScreenState extends State<NavScreen> {

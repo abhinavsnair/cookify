@@ -1,9 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:cookify/utilities/card.dart';
-import 'package:cookify/utilities/utils.dart';
+import 'package:cookify/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -101,29 +102,30 @@ class ShowcaseScreen extends StatelessWidget {
                 children: [
                   SearchBar(),
                   SizedBox(
-                    height: 100,
+                    height: 100.h,
                     width: MediaQuery.of(context).size.width,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
                       children: List.generate(6, (index) {
                         return Padding(
-                          padding: const EdgeInsets.all(8.0),
+                          padding: EdgeInsets.all(8.0.w),
                           child: Container(
-                            padding: EdgeInsets.all(18),
+                            padding: EdgeInsets.all(18.w),
                             decoration: BoxDecoration(
                                 color: boxOrange.withOpacity(0.4),
-                                borderRadius: BorderRadius.circular(10)),
+                                borderRadius: BorderRadius.circular(10.r)),
                             child: Column(
                               children: [
                                 icon[index],
                                 SizedBox(
-                                  height: 5,
+                                  height: 5.h,
                                 ),
                                 Text(
                                   text[index],
                                   style: GoogleFonts.rokkitt(
                                     color: orange,
                                     fontWeight: FontWeight.w500,
+                                     fontSize: 12.sp,
                                   ),
                                 ),
                               ],
@@ -136,45 +138,44 @@ class ShowcaseScreen extends StatelessWidget {
                   Column(
                     children: List.generate(3, (index) {
                       return Padding(
-                        padding: const EdgeInsets.all(5.0),
+                        padding: EdgeInsets.all(5.0.w),
                         child: GestureDetector(
                           onTap: (() {
                             Get.to(CardView());
                           }),
                           child: Container(
-                            height: 280,
+                            height: 280.h,
                             width: MediaQuery.of(context).size.width,
                             color: Colors.transparent,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Container(
-                                  height: 200,
+                                  height: 200.h,
                                   decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
+                                      borderRadius: BorderRadius.circular(10.r),
                                       image: DecorationImage(
                                         image: NetworkImage(image[index]),
                                         fit: BoxFit.cover,
                                       )),
                                 ),
                                 SizedBox(
-                                  height: 5,
+                                  height: 5.h,
                                 ),
                                 Text(
                                   item[index],
                                   style: GoogleFonts.rokkitt(
                                       color: Colors.white,
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 20),
+                                      fontSize: 20.sp),
                                 ),
                                 Text(
                                   'Easy, quick and yet so delicious',
                                   style: GoogleFonts.rokkitt(
-                                    color: grey,
-                                  ),
+                                      color: grey, fontSize: 12.sp),
                                 ),
                                 SizedBox(
-                                  height: 10,
+                                  height: 10.h,
                                 ),
                                 Row(
                                   children: [
@@ -183,47 +184,50 @@ class ShowcaseScreen extends StatelessWidget {
                                         Icon(
                                           Icons.favorite_border_outlined,
                                           color: grey,
-                                          size: 20,
+                                          size: 20.h,
                                         ),
                                         SizedBox(
-                                          width: 5,
+                                          width: 5.w,
                                         ),
                                         Text(
                                           '100',
                                           style: GoogleFonts.rokkitt(
                                             color: grey,
+                                            fontSize: 12.sp,
                                           ),
                                         )
                                       ],
                                     ),
                                     SizedBox(
-                                      width: 10,
+                                      width: 10.w,
                                     ),
                                     Row(
                                       children: [
                                         Icon(
                                           Icons.access_time_rounded,
                                           color: grey,
-                                          size: 20,
+                                          size: 20.h,
                                         ),
                                         SizedBox(
-                                          width: 5,
+                                          width: 5.w,
                                         ),
                                         Text(
                                           '50\'',
                                           style: GoogleFonts.rokkitt(
                                             color: grey,
+                                            fontSize: 12.sp,
                                           ),
                                         )
                                       ],
                                     ),
                                     SizedBox(
-                                      width: 15,
+                                      width: 15.w,
                                     ),
                                     Text(
                                       '2 Ingredients',
                                       style: GoogleFonts.rokkitt(
                                         color: grey,
+                                        fontSize: 12.sp,
                                       ),
                                     )
                                   ],
@@ -236,12 +240,12 @@ class ShowcaseScreen extends StatelessWidget {
                     }),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   SpinKitRing(
                     color: orange,
-                    lineWidth: 3,
-                    size: 22,
+                    lineWidth: 3.w,
+                    size: 22.h,
                   )
                 ],
               ),

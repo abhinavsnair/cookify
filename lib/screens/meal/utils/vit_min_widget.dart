@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../../../utilities/utils.dart';
+import '../../../utilities/constants.dart';
 
 class VitaminsandMinaralsWidget extends StatelessWidget {
   const VitaminsandMinaralsWidget({
@@ -11,19 +12,23 @@ class VitaminsandMinaralsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 130,
+      height: 130.h,
       width: double.infinity,
       decoration: BoxDecoration(
-          color: boxOrange.withOpacity(0.2),
-          borderRadius: BorderRadius.circular(10)),
+        color: boxOrange.withOpacity(0.2),
+        borderRadius: BorderRadius.circular(10.r),
+      ),
       child: Column(
         children: [
+          SizedBox(
+            height: 5.h,
+          ),
           Text(
             'Vitamins & Minarals',
             style: GoogleFonts.rokkitt(
               color: orange,
               fontWeight: FontWeight.bold,
-              fontSize: 23,
+              fontSize: 23.sp,
             ),
           ),
           Text(
@@ -32,8 +37,8 @@ class VitaminsandMinaralsWidget extends StatelessWidget {
               color: grey,
             ),
           ),
-          const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -45,7 +50,7 @@ class VitaminsandMinaralsWidget extends StatelessWidget {
                     style: GoogleFonts.rokkitt(
                       color: orange,
                       fontWeight: FontWeight.bold,
-                      fontSize: 25,
+                      fontSize: 25.sp,
                     ),
                   ),
                   Text(
@@ -57,8 +62,8 @@ class VitaminsandMinaralsWidget extends StatelessWidget {
                 ],
               ),
               Container(
-                height: 50,
-                width: 1,
+                height: 50.h,
+                width: 1.w,
                 color: orange,
               ),
               Column(
@@ -68,7 +73,7 @@ class VitaminsandMinaralsWidget extends StatelessWidget {
                     style: GoogleFonts.rokkitt(
                       color: orange,
                       fontWeight: FontWeight.bold,
-                      fontSize: 25,
+                      fontSize: 25.sp,
                     ),
                   ),
                   Text(
@@ -80,8 +85,8 @@ class VitaminsandMinaralsWidget extends StatelessWidget {
                 ],
               ),
               Container(
-                height: 50,
-                width: 1,
+                height: 50.h,
+                width: 1.w,
                 color: orange,
               ),
               Column(
@@ -91,7 +96,7 @@ class VitaminsandMinaralsWidget extends StatelessWidget {
                     style: GoogleFonts.rokkitt(
                       color: orange,
                       fontWeight: FontWeight.bold,
-                      fontSize: 25,
+                      fontSize: 25.sp,
                     ),
                   ),
                   Text(
