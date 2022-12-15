@@ -12,7 +12,7 @@ class CardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bcolor,
+  
       body: Padding(
         padding:  EdgeInsets.all(8.0.w),
         child: ListView(children: [
@@ -25,7 +25,7 @@ class CardView extends StatelessWidget {
                   },
                   child: Icon(
                     Icons.chevron_left_sharp,
-                    color: Colors.white,
+                   
                   )),
               Icon(
                 Icons.favorite_border,
@@ -39,7 +39,7 @@ class CardView extends StatelessWidget {
           Text(
             'Watercress Salad',
             style: GoogleFonts.rokkitt(
-              color: Colors.white,
+    
               fontWeight: FontWeight.bold,
               fontSize: 30.sp,
             ),
@@ -54,7 +54,7 @@ class CardView extends StatelessWidget {
           Text(
             'Nutritions',
             style: GoogleFonts.rokkitt(
-                fontWeight: FontWeight.bold, fontSize: 26.sp, color: Colors.white,),
+                fontWeight: FontWeight.bold, fontSize: 26.sp, ),
           ),
           Stack(
             children: [
@@ -228,7 +228,7 @@ class CardView extends StatelessWidget {
             style: GoogleFonts.rokkitt(
               fontWeight: FontWeight.bold,
               fontSize: 26,
-              color: Colors.white,
+            
             ),
           ),
           Text(

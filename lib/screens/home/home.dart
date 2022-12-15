@@ -55,7 +55,7 @@ class HomeScreen extends StatelessWidget {
     return WillPopScope(
       onWillPop: showExitPopup,
       child: Scaffold(
-        backgroundColor: bcolor,
+        
         body: Padding(
           padding:  EdgeInsets.all(8.0.w),
           child: ListView(

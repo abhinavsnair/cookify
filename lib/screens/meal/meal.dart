@@ -86,7 +86,7 @@ class _MealScreenState extends State<MealScreen> {
     return WillPopScope(
       onWillPop: showExitPopup,
       child: Scaffold(
-        backgroundColor: bcolor,
+        
         body: SafeArea(
           child: Padding(
             padding:  EdgeInsets.all(8.0.w),
@@ -98,7 +98,7 @@ class _MealScreenState extends State<MealScreen> {
                   style: GoogleFonts.rokkitt(
                     fontWeight: FontWeight.bold,
                     fontSize: 30.sp,
-                    color: Colors.white,
+                  
                   ),
                 ),
                 SizedBox(

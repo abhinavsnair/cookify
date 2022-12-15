@@ -13,7 +13,7 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bcolor,
+
       body: SafeArea(
         child: Column(
           children: [
@@ -32,55 +32,57 @@ class WelcomeScreen extends StatelessWidget {
             ),
             Lottie.asset('assets/lottie.json'),
             Padding(
-              padding:  EdgeInsets.only(top: 30.h),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  TextButton(
-                    onPressed: () {
-                      Get.to(
-                        SigninScreen(),
-                        transition: Transition.fadeIn,
-                      );
-                    },
-                    child: Text(
-                      'SIGN UP',
-                      style: GoogleFonts.rokkitt(
-                          color: orange,
-                          fontSize: 16.sp,
-                          fontWeight: FontWeight.bold),
-                    ),
-                  ),
-                   SizedBox(
-                    width: 45.w,
-                  ),
-                  GestureDetector(
-                    onTap: () {
-                      Get.to(
-                         const LoginScreen(),
-                        transition: Transition.fade,
-                      );
-                    },
-                    child: Container(
-                      height: 40.h,
-                      width: 140.w,
-                      decoration: BoxDecoration(
-                        color: orange,
-                        borderRadius: BorderRadius.circular(7.r),
-                      ),
-                      child: Center(
-                        child: Text(
-                          'LOG IN',
-                          style: GoogleFonts.rokkitt(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
+              padding:  EdgeInsets.only(top: 50.h,left: 30.w),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    TextButton(
+                      onPressed: () {
+                        Get.to(
+                          SigninScreen(),
+                          transition: Transition.fadeIn,
+                        );
+                      },
+                      child: Text(
+                        'SIGN UP',
+                        style: GoogleFonts.rokkitt(
+                            color: orange,
                             fontSize: 16.sp,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                     SizedBox(
+                      width: 45.w,
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.to(
+                           const LoginScreen(),
+                          transition: Transition.fade,
+                        );
+                      },
+                      child: Container(
+                        height: 40.h,
+                        width: 140.w,
+                        decoration: BoxDecoration(
+                          color: orange,
+                          borderRadius: BorderRadius.circular(7.r),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'LOG IN',
+                            style: GoogleFonts.rokkitt(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 16.sp,
+                            ),
                           ),
                         ),
                       ),
-                    ),
-                  )
-                ],
+                    )
+                  ],
+                ),
               ),
             )
           ],

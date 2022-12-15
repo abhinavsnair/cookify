@@ -94,7 +94,7 @@ class ShowcaseScreen extends StatelessWidget {
     return WillPopScope(
       onWillPop: showExitPopup,
       child: Scaffold(
-          backgroundColor: bcolor,
+     
           body: SafeArea(
             child: Padding(
               padding: const EdgeInsets.all(8.0),
@@ -102,7 +102,7 @@ class ShowcaseScreen extends StatelessWidget {
                 children: [
                   SearchBar(),
                   SizedBox(
-                    height: 100.h,
+                    height: 70.h,
                     width: MediaQuery.of(context).size.width,
                     child: ListView(
                       scrollDirection: Axis.horizontal,
@@ -110,7 +110,7 @@ class ShowcaseScreen extends StatelessWidget {
                         return Padding(
                           padding: EdgeInsets.all(8.0.w),
                           child: Container(
-                            padding: EdgeInsets.all(18.w),
+                            padding: EdgeInsets.all(10.w),
                             decoration: BoxDecoration(
                                 color: boxOrange.withOpacity(0.4),
                                 borderRadius: BorderRadius.circular(10.r)),

@@ -56,7 +56,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     return WillPopScope(
       onWillPop: showExitPopup,
       child: Scaffold(
-        backgroundColor: bcolor,
+ 
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(8.0).w,
@@ -85,7 +85,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         Text(
                           'Option',
                           style: GoogleFonts.rokkitt(
-                            color: Colors.white,
+                        
                             fontWeight: FontWeight.bold,
                             fontSize: 18.sp,
                           ),
@@ -102,20 +102,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           title: Text(
                             'Notification',
                             style: GoogleFonts.rokkitt(
-                                color: Colors.white, fontSize: 13.sp),
+                                fontSize: 13.sp),
                           ),
                         ),
                         ListTile(
                           leading: Text(
                             'Language',
                             style: GoogleFonts.rokkitt(
-                              color: Colors.white,
+                             
                               fontSize: 17.sp,
                             ),
                           ),
                           trailing: Icon(
                             Icons.chevron_right_sharp,
-                            color: Colors.white,
+                        
                             size: 20.h,
                           ),
                         ),
@@ -131,7 +131,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           title: Text(
                             'Offline Reading',
                             style: GoogleFonts.rokkitt(
-                              color: Colors.white,
+                         
                               fontSize: 13.sp,
                             ),
                           ),
@@ -150,7 +150,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         Text(
                           'Account',
                           style: GoogleFonts.rokkitt(
-                            color: Colors.white,
+                       
                             fontWeight: FontWeight.bold,
                             fontSize: 18.sp,
                           ),
@@ -159,13 +159,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           leading: Text(
                             'Personal Information',
                             style: GoogleFonts.rokkitt(
-                              color: Colors.white,
+                         
                               fontSize: 17.sp,
                             ),
                           ),
                           trailing: Icon(
                             Icons.chevron_right_sharp,
-                            color: Colors.white,
+                    
                             size: 20.h,
                           ),
                         ),
@@ -173,11 +173,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           leading: Text(
                             'Country',
                             style: GoogleFonts.rokkitt(
-                                color: Colors.white, fontSize: 17.sp),
+                             fontSize: 17.sp),
                           ),
                           trailing: Icon(
                             Icons.chevron_right_sharp,
-                            color: Colors.white,
+                            
                             size: 20.h,
                           ),
                         ),
@@ -185,11 +185,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           leading: Text(
                             'favorite Recipes',
                             style: GoogleFonts.rokkitt(
-                                color: Colors.white, fontSize: 17.sp),
+                            fontSize: 17.sp),
                           ),
                           trailing: Icon(
                             Icons.chevron_right_sharp,
-                            color: Colors.white,
+                           
                             size: 20.h,
                           ),
                         ),

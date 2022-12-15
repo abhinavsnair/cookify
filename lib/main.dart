@@ -15,8 +15,12 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       builder: (context, child) => GetMaterialApp(
         debugShowCheckedModeBanner: false,
+        themeMode: ThemeMode.system,
+        darkTheme: ThemeData(brightness: Brightness.dark),
         theme: ThemeData(
           primarySwatch: Colors.orange,
+          brightness: Brightness.light,
+          
         ),
         home: const WelcomeScreen(),
       ),

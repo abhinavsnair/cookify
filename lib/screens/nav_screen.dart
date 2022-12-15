@@ -31,7 +31,7 @@ class _NavScreenState extends State<NavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: bcolor,
+      
         body: screens[currentindex],
         bottomNavigationBar: BottomBar(
           selectedIndex: currentindex,

@@ -13,7 +13,7 @@ class FpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: bcolor,
+      
       body: SafeArea(
         child: Padding(
           padding:  EdgeInsets.only(top: 100.h),

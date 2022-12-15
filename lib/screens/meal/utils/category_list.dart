@@ -35,7 +35,7 @@ class CategoryList extends StatelessWidget {
                 children: [
                   Text(
                     foodtime[index],
-                    style: GoogleFonts.rokkitt(color: Colors.white,fontSize: 13.sp),
+                    style: GoogleFonts.rokkitt(fontSize: 13.sp),
                   ),
                    SizedBox(
                     height: 5.h,
@@ -62,7 +62,7 @@ class CategoryList extends StatelessWidget {
                             Text(
                               item[index],
                               style: GoogleFonts.rokkitt(
-                                color: Colors.white,
+                                
                                 fontSize: 15.sp,
                                 fontWeight: FontWeight.bold,
                               ),
@@ -79,7 +79,7 @@ class CategoryList extends StatelessWidget {
                       ),
                        Icon(
                         Icons.chevron_right_rounded,
-                        color: Colors.white,
+                     
                         size: 24.h,
                       )
                     ],

@@ -18,7 +18,7 @@ class SearchBar extends StatelessWidget {
             height: 40.h,
             width: 260.w,
             decoration: BoxDecoration(
-              color: const Color.fromARGB(255, 58, 58, 58),
+              // color: const Color.fromARGB(255, 58, 58, 58),
               borderRadius: BorderRadius.circular(10.r),
             ),
             child: const TextField(

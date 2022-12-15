@@ -12,6 +12,7 @@ class ProfileBox extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      padding: const EdgeInsets.all(8).w,
       height: 120.h,
       width: double.infinity,
       decoration: BoxDecoration(
@@ -37,7 +38,7 @@ class ProfileBox extends StatelessWidget {
                 Text(
                   'Abhinav S Nair',
                   style: GoogleFonts.rokkitt(
-                    color: Colors.white,
+                    
                     fontWeight: FontWeight.bold,
                     fontSize: 20.sp,
                   ),
