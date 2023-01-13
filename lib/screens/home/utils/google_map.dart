@@ -1,3 +1,4 @@
+import 'package:cookify/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
@@ -17,6 +18,7 @@ class _MapViewState extends State<MapView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
+        zoomControlsEnabled: false,
         initialCameraPosition: const CameraPosition(
           target: currentLocation,
           zoom: 14,
@@ -26,15 +28,30 @@ class _MapViewState extends State<MapView> {
         },
         markers: _markers.values.toSet(),
       ),
+      floatingActionButton: FloatingActionButton.extended(
+        backgroundColor: orange,
+        onPressed: () {},
+        label: const Text(
+          'Current Location',
+          style: TextStyle(color: Colors.white),
+        ),
+        icon: const Icon(
+          Icons.location_history,
+          color: Colors.white,
+        ),
+      ),
     );
   }
 
   addMarker(String id, LatLng location) {
     var marker = Marker(
-        markerId: MarkerId(id),
-        position: location,
-        infoWindow:
-            const InfoWindow(title: 'title of the place', snippet: 'HomeTown'));
+      markerId: MarkerId(id),
+      position: location,
+      infoWindow: const InfoWindow(
+        title: 'Title of the place',
+        snippet: 'HomeTown',
+      ),
+    );
     _markers[id] = marker;
     setState(() {});
   }
