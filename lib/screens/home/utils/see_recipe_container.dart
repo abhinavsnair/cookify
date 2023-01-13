@@ -54,11 +54,7 @@ class SeeRecipeContainer extends StatelessWidget {
                           fontSize: 12.sp
                         ),
                       ),
-                      Container(
-                        height: 0.8.h,
-                        width: 40.w,
-                        color: orange,
-                      )
+                    
                     ],
                   ),
                 )

@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'utils/container_list.dart';
+import 'utils/location_box.dart';
 import 'utils/main_card.dart';
 import 'utils/see_recipe_container.dart';
 
@@ -55,22 +56,26 @@ class HomeScreen extends StatelessWidget {
     return WillPopScope(
       onWillPop: showExitPopup,
       child: Scaffold(
-        
         body: Padding(
-          padding:  EdgeInsets.all(8.0.w),
+          padding: EdgeInsets.all(8.0.w),
           child: ListView(
-            
             children: [
-              const TopTitle(),
-               SizedBox(
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  TopTitle(),
+                  LocationBox()
+                ],
+              ),
+              SizedBox(
                 height: 20.h,
               ),
               const SeeRecipeContainer(),
-               SizedBox(
+              SizedBox(
                 height: 20.h,
               ),
               const MainCard(),
-               SizedBox(
+              SizedBox(
                 height: 20.h,
               ),
               Text(
@@ -92,3 +97,5 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+
