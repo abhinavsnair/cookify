@@ -1,3 +1,7 @@
+// ignore_for_file: prefer_const_constructors
+
+import 'dart:developer';
+
 import 'package:cookify/utilities/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -17,16 +21,53 @@ class _MapViewState extends State<MapView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GoogleMap(
-        zoomControlsEnabled: false,
-        initialCameraPosition: const CameraPosition(
-          target: currentLocation,
-          zoom: 14,
-        ),
-        onMapCreated: (controller) {
-          addMarker('test', currentLocation);
-        },
-        markers: _markers.values.toSet(),
+      body: Stack(
+        children: [
+          GoogleMap(
+            zoomControlsEnabled: false,
+            initialCameraPosition: const CameraPosition(
+              target: currentLocation,
+              zoom: 14,
+            ),
+            onMapCreated: (controller) {
+              addMarker('test', currentLocation);
+            },
+            markers: _markers.values.toSet(),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(top: 80, right: 20, left: 20),
+            child: Container(
+              height: 40.h,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: boxOrange.withOpacity(0.6),
+                borderRadius: BorderRadius.circular(15.r),
+              ),
+              child: TextField(
+                cursorColor: boxOrange,
+                decoration: InputDecoration(
+                  border: OutlineInputBorder(
+                    borderSide: BorderSide.none,
+                  ),
+                  hintText: 'Search',
+                  contentPadding: EdgeInsets.all(8),
+                  hintStyle: TextStyle(
+                    color: Colors.white,
+                  ),
+                  suffixIcon: GestureDetector(
+                    onTap: () {
+                      log('tap');
+                    },
+                    child: Icon(
+                      Icons.search,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          )
+        ],
       ),
       floatingActionButton: FloatingActionButton.extended(
         backgroundColor: orange,

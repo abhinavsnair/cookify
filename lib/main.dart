@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 
-import 'screens/home/utils/google_map.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +23,7 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.light,
         ),
         home: const WelcomeScreen(),
-        // home: MapView(),
+
       ),
       designSize: const Size(360, 640),
       minTextAdapt: true,

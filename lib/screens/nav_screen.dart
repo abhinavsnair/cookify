@@ -31,29 +31,27 @@ class _NavScreenState extends State<NavScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
-        body: screens[currentindex],
-        bottomNavigationBar: BottomBar(
-          selectedIndex: currentindex,
-          onTap: onchanged,
-          items: const <BottomBarItem>[
-            BottomBarItem(
-                icon: Icon(Icons.home),
-                activeColor: orange,
-                title: Text('Home')),
-            BottomBarItem(
-                icon: Icon(Icons.menu_book_rounded),
-                activeColor: orange,
-                title: Text('Showcase')),
-            BottomBarItem(
-                icon: Icon(Icons.fastfood),
-                activeColor: orange,
-                title: Text('Meal')),
-            BottomBarItem(
-                icon: Icon(Icons.person),
-                activeColor: orange,
-                title: Text('Settings')),
-          ],
-        ));
+      body: screens[currentindex],
+      bottomNavigationBar: BottomBar(
+        selectedIndex: currentindex,
+        onTap: onchanged,
+        items: const <BottomBarItem>[
+          BottomBarItem(
+              icon: Icon(Icons.home), activeColor: orange, title: Text('Home')),
+          BottomBarItem(
+              icon: Icon(Icons.menu_book_rounded),
+              activeColor: orange,
+              title: Text('Showcase')),
+          BottomBarItem(
+              icon: Icon(Icons.fastfood),
+              activeColor: orange,
+              title: Text('Meal')),
+          BottomBarItem(
+              icon: Icon(Icons.person),
+              activeColor: orange,
+              title: Text('Settings')),
+        ],
+      ),
+    );
   }
 }
